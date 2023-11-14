@@ -5,8 +5,11 @@ const app = express()
 //setting the EJS
 app.set("view engine", "ejs")
 
+//setting statics archives
+app.use(express.static("public"))
+
 app.get("/", (req, res) => {
-  res.send("success")
+  res.render("home")
 })
 
 
