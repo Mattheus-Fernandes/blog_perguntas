@@ -12,6 +12,10 @@ app.get("/", (req, res) => {
   res.render("home")
 })
 
+app.get("/ask", (req, res) => {
+  res.render("ask")
+})
+
 
 
 const port = 8080 || process.env
