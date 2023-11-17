@@ -68,3 +68,67 @@ label {
 .iconPage {
   width: 30px;
 }
+
+/*Box area under development*/
+
+.boxUnderDevelopment {
+  background-color: var(--witsful);
+  color: var(--nightshade);
+  height: 40vh;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.boxPageDevelopment {
+  border: 3px solid var(--nightshade);
+  width: 154px;
+  height: 162px;
+  border-radius: 7px;
+}
+
+.boxHeader {
+  background-color: var(--nightshade);
+  height: 10px;
+  width: 20px;
+  margin: 5px;
+}
+
+.boxesHeader {
+  display: flex;
+}
+
+.lineBox {
+  height: 2px;
+  width: 100%;
+  background-color: var(--nightshade);
+}
+
+.bodyBox {
+  height: 10vh;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.boxEmpty {
+  width: 50px;
+  height: 50px;
+  background-color: var(--nightshade);
+}
+
+.lines {
+  height: 4px;
+  width: 56px;
+  margin: 5px;
+  background-color: var(--nightshade);
+}
+
+.drawingLine {
+  height: 2px;
+  width: 126px;
+  margin: 8px;
+  background-color: var(--nightshade);
+}
