@@ -8,6 +8,11 @@ body {
   background-color: var(--mardigras);
 }
 
+.navbar {
+  background-color: var(--witsful);
+
+}
+
 .cardStyle {
   border: none;
 }
