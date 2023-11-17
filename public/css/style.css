@@ -1,0 +1,50 @@
+:root {
+  --witsful: #e5e2e6;
+  --nightshade:  #352664;
+  --mardigras: #a149a1;
+}
+
+body {
+  background-color: var(--mardigras);
+}
+
+.cardStyle {
+  border: none;
+}
+
+.cardHeaderStyle {
+  background-color: var(--nightshade);
+  color: var(--witsful);
+}
+
+.cardBodyStyle {
+  background-color: var(--witsful);
+}
+
+.styleInput::placeholder{
+  color: var(--mardigras);
+}
+
+label {
+  color: var(--nightshade);
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.btnAsk {
+  background-color: var(--nightshade);
+  color: var(--witsful);
+  padding: 10px;
+  border: 1px solid transparent;
+  border-radius: 6px;
+
+  display: flex;
+  align-items: center;
+}
+
+.btnAsk:hover {
+  background-color: var(--witsful);
+  color: var(--nightshade);
+  border: 1px solid var(--nightshade);
+}
+
