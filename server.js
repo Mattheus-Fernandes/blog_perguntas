@@ -8,12 +8,23 @@ app.set("view engine", "ejs")
 //setting statics archives
 app.use(express.static("public"))
 
+//setting form receipt
+app.use(express.urlencoded({extended: false}))
+app.use(express.json())
+
 app.get("/", (req, res) => {
   res.render("home")
 })
 
 app.get("/ask", (req, res) => {
   res.render("ask")
+})
+
+app.post("/saveask", (req, res) => {
+  const title = req.body.title
+  const description = req.body.description
+
+  res.send(`${title} ${description}`)
 })
 
 
