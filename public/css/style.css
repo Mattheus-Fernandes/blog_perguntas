@@ -53,3 +53,18 @@ label {
   border: 1px solid var(--nightshade);
 }
 
+.navbar ul li {
+  display: flex;
+  align-items: center;
+}
+
+.namePage {
+  font-family: 'Kdam Thmor Pro', sans-serif;
+  font-size: 35px;
+  text-decoration: none;
+  color: var(--nightshade);
+}
+
+.iconPage {
+  width: 30px;
+}
