@@ -15,3 +15,5 @@ const Ask = connection.define("aks", {
 
 Ask.sync({force: false})
   .then(() => {})
+
+module.exports = Ask
