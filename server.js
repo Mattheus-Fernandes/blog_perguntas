@@ -1,7 +1,7 @@
 const express = require("express")
 const app = express()
 const connection = require("./database/index")
-
+const askModel = require("./database/ask")
 
 //Connection with database
 connection
@@ -17,7 +17,7 @@ connection
 //setting the EJS
 app.set("view engine", "ejs")
 
-//setting statics archives
+//setting statics archivesj
 app.use(express.static("public"))
 
 //setting form receipt
