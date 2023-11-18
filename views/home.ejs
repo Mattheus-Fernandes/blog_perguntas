@@ -3,12 +3,12 @@
   
   <%- include("partials/navbar.ejs") %>
     <div class="container">
-      <h1 class="mb-3">Perguntas</h1>
+      <h1 class="mb-3 askHomePage">Perguntas</h1>
       <a href="/ask" class="askColor btnAsk mb-5">Perguntar</a>
       <% asks.forEach(ask => { %>
         <div class="card mb-3">
-          <div class="card-body">
-            <h3><%- ask.title %></h3>
+          <div class="card-body cardBodyStyle">
+            <h3 class="aksTitle"><%- ask.title %></h3>
           </div>
           <div class="card-footer">
             <button class="btnAsk">Responder</button>
