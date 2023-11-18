@@ -57,7 +57,12 @@ app.get("/ask/:id", (req, res) => {
   askModel.findOne({where: {id}})
   .then(ask => {
     if(ask != undefined){
-      res.render("showAsk", {ask})
+
+      responseModel.findAll({idAsk: ask.id, order: [["id", "desc"]]})
+        .then((response) => {
+          res.render("showAsk", {ask, response})
+        })
+
     }else {
       res.redirect("/")
     }
@@ -65,6 +70,18 @@ app.get("/ask/:id", (req, res) => {
 
 })
 
+
+app.post("/response", (req, res) => {
+    const body = req.body.body
+    const idAsk = req.body.ask
+
+    responseModel.create({
+      body,
+      idAsk
+    }).then(() => {
+      res.redirect("/ask/"+ idAsk)
+    })
+})
 
 const port = 8080 || process.env
 app.listen(port, () => console.log(`You are connected on the port ${port}`))
