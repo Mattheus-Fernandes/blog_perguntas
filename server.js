@@ -25,7 +25,14 @@ app.use(express.urlencoded({extended: false}))
 app.use(express.json())
 
 app.get("/", (req, res) => {
-  res.render("home")
+  askModel.findAll({raw: true})
+    .then(asks => {
+      res.render("home", {
+        asks
+      })
+
+      console.log(asks)
+    })
 })
 
 app.get("/ask", (req, res) => {
