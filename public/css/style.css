@@ -143,3 +143,12 @@ label {
 .askColor:hover {
   color: var(--nightshade);
 }
+
+.askHomePage {
+  color: var(--witsful);
+  text-decoration: underline;
+}
+
+.askTitle {
+  color: var(--nightshade);
+}
