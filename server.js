@@ -1,5 +1,17 @@
 const express = require("express")
 const app = express()
+const connection = require("./database/index")
+
+
+//Connection with database
+connection
+  .authenticate()
+  .then(() => {
+    console.log("Connected with the database")
+  })
+  .catch((msgError) => {
+    console.log(msgError)
+  })
 
 
 //setting the EJS
