@@ -51,6 +51,19 @@ app.post("/saveask", (req, res) => {
   })
 })
 
+app.get("/ask/:id", (req, res) => {
+  const id = req.params.id
+
+  askModel.findOne({where: {id}})
+  .then(ask => {
+    if(ask != undefined){
+      res.render("showAsk", {ask})
+    }else {
+      res.redirect("/")
+    }
+  })
+
+})
 
 
 const port = 8080 || process.env
