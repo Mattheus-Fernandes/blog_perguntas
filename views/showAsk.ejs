@@ -11,6 +11,22 @@
           <p><%= ask.description %></p>
         </div>
       </div>
+      <form method="POST" action="/response">
+        <label class="responseShowAskPage">Responda:</label>
+        <textarea class="form-control styleInput" name="body" cols="10" rows="5" placeholder="Digite a sua resposta..."></textarea>
+        <input type="hidden" name="ask" value="<%= ask.id %>">
+        <button type="submit" class="btnAsk mt-2">Responder</button>
+      </form>
+
+      <h3 class="responseShowAskPage text-decoration-underline">Respostas</h3>
+
+      <% response.forEach(res => { %>
+        <div class="card cardStyle mb-2 bd-1">
+          <div class="card-body cardBodyStyle askDescription">
+            <p><%= res.body %></p>
+          </div>
+        </div>
+      <% }) %>
     </div>
 </body>
 <%- include("partials/footer.ejs") %>
