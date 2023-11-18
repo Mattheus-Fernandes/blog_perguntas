@@ -2,7 +2,7 @@ const express = require("express")
 const app = express()
 const connection = require("./database/index")
 const askModel = require("./database/ask")
-
+const responseModel = require("./database/response")
 //Connection with database
 connection
   .authenticate()
