@@ -36,7 +36,12 @@ app.post("/saveask", (req, res) => {
   const title = req.body.title
   const description = req.body.description
 
-  res.send(`${title} ${description}`)
+  askModel.create({
+    title,
+    description
+  }).then(() => {
+    res.redirect("/")
+  })
 })
 
 
