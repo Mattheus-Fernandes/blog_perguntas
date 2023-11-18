@@ -25,13 +25,13 @@ app.use(express.urlencoded({extended: false}))
 app.use(express.json())
 
 app.get("/", (req, res) => {
-  askModel.findAll({raw: true})
+  askModel.findAll({raw: true, order: [
+    ["id", "desc"]
+  ]})
     .then(asks => {
       res.render("home", {
         asks
       })
-
-      console.log(asks)
     })
 })
 
