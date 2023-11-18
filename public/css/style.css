@@ -132,3 +132,14 @@ label {
   margin: 8px;
   background-color: var(--nightshade);
 }
+
+.askColor {
+  color: var(--witsful);
+  width: 100px;
+  display: flex;
+  justify-content: center;
+}
+
+.askColor:hover {
+  color: var(--nightshade);
+}
